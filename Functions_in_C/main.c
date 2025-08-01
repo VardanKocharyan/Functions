@@ -5,6 +5,12 @@ void simple(int);
 int Power(int , int);
 void Reverse_Arr(int* , int const);
 int Second_Max(int const , int*);
+float CelsiusToFahrenheit(float );
+void IsAlpha(char);
+int Factory(int);
+int SumDigit(int);
+int NumReverse(int);
+
 int main(){
 
 //SUM:
@@ -59,7 +65,46 @@ int main(){
 
 //SECOND MAXIMUM IN ARR
 	printf("        Second_Max(Let's use the previous array.)\n");
-	printf("The maximum second number is %d\n" , Second_Max(size , arr));
+	printf("The maximum second number is %d\n\n" , Second_Max(size , arr));
+
+//Celsius To Fahrenheit
+	printf("	Celsius To Fahrenheit");
+	float c = 0;
+	printf("Enter temperature(C):");
+	scanf("%f" , &c);
+	printf("%2fC To Fahrenheit is %2f:\n\n" , c ,CelsiusToFahrenheit(c));
+	
+//isalpha
+	printf("	ISALPHA:\n");
+	char ch = '\0';
+	printf("Enter the character:");
+	scanf(" %c" , &ch);
+	IsAlpha(ch);
+	printf("\n\n");
+
+//FACTORY
+	printf("        FACTORY:\n");
+	int factory_num = 0;
+	do{
+		printf("Enter the number(>0):");
+		scanf("%d" , &factory_num);
+	}while(factory_num < 1);
+	printf("The result of factory is %d\n\n" , Factory(factory_num));
+
+//SUM OF DIGITS
+	printf("	SumDigit\n");
+	int num_for_sum_digit = 0;
+	printf("Enter the number:");
+	scanf("%d" , &num_for_sum_digit);
+	printf("The numbers digits sum is %d\n\n" , SumDigit(num_for_sum_digit));
+	
+//NUMBER REVERSE
+	printf("        NumReverse\n");
+	int num_for_reverse = 0;
+	printf("Enter the number:");
+	scanf("%d" , &num_for_reverse);
+	printf("The reverse numbers result is:%d\n\n", NumReverse(num_for_reverse));
+
 
 return 0;
 }
